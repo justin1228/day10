@@ -20,22 +20,23 @@ function handleClick(event){
     num1 = randNum;
     
     result.innerHTML = `You: ${iN.value} <br> Computer: ${num1}`;
-    if(iN.value === num1){
-        result_1.innerHTML = "You Win!";
+    if(iN.value == num1){
+        result_1.innerText = "You Win!";
     }
     else(
-        result_1.innerHTML = "You Lose!"
+        result_1.innerText = "You Lose!"
     )
 }
 function handleOnchange(){
     var iVal = iR.value;
     generate.innerHTML = `Generate number between 0 and ${iVal}`;
     
-    sM.addEventListener("click",handleClick);
+    
 }
 
 function init(){
     iR.addEventListener("input", handleOnchange);
+    sM.addEventListener("click",handleClick);
 }
 
 init();
